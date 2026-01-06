@@ -4,6 +4,7 @@ import Stats from './components/Stats'
 import ControlPanel from './components/ControlPanel'
 import TypingArea from './components/TypingArea'
 import Results from './components/Results'
+import './App.css';
 
 function App() {
   const [currentPassage, setCurrentPassage] = useState("");
