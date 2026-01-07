@@ -35,3 +35,7 @@ body {
   background-color: var(--neutral-900);
   color: var(--neutral-0);
 }
+
+.app {
+  margin: 20rem;
+}
