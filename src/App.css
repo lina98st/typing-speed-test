@@ -34,5 +34,24 @@ body {
   font-size: var(--font-size-base);
   background-color: var(--neutral-900);
   color: var(--neutral-0);
+  line-height: 1.6;
 }
 
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Basic button styling */
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
