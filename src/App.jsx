@@ -16,8 +16,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Stats />
-      <ControlPanel />
+      <div className="controls-container">
+             <Stats />
+      <ControlPanel /> 
+      </div>
       {!showResults && <TypingArea />}
       {showResults && <Results />}
     </div>
