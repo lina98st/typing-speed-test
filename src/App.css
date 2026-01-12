@@ -33,7 +33,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   background-color: var(--neutral-900);
-  color: var(--neutral-0);
+  color: var(--neutral-500);
   line-height: 1.6;
 }
 
@@ -44,11 +44,18 @@ body {
   min-height: 100vh;
 }
 
+.header h1 {
+color: var(--neutral-0);
+}
+
 button {
   font-family: var(--font-family);
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
+  border: var(--neutral-0);
 }
 
 button:hover {

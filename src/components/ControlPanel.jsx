@@ -5,9 +5,9 @@ function ControlPanel() {
       <div className="control-group">
         <label>Difficulty:</label>
         <div className="button-group">
-          <button className="btn active">Easy</button>
-          <button className="btn">Medium</button>
-          <button className="btn">Hard</button>
+          <button className="btn active" onClick={easyMode}>Easy</button>
+          <button className="btn"  onClick={mediumMode}>Medium</button>
+          <button className="btn" onClick={hardMode}>Hard</button>
         </div>
       </div>
 
