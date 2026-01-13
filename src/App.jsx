@@ -13,12 +13,17 @@ function App() {
   const [isTestActive, setIsTestActive] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
+function handleDifficultyChange(level) {
+setDifficulty(level) 
+}
+
+
   return (
     <div className="app">
       <Header />
       <div className="controls-container">
              <Stats />
-      <ControlPanel /> 
+      <ControlPanel difficulty={difficulty} onDifficultyChange={handleDifficultyChange}/> 
       </div>
       {!showResults && <TypingArea />}
       {showResults && <Results />}
