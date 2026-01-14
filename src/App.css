@@ -89,3 +89,15 @@ gap: 0.5rem;
   gap: 3rem;
   align-items: center;
 }
+
+.btn {
+  background-color: var(--neutral-800);
+  color: var(--neutral-0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.btn.active {
+  background-color: var(--blue-600);
+  color: var(--neutral-0);
+}
