@@ -14,7 +14,8 @@ function App() {
   const [showResults, setShowResults] = useState(false);
 
 function handleDifficultyChange(level) {
-setDifficulty(level) 
+  console.log("Button clicked! New level:", level);  // ← Semikolon fehlt hier
+  setDifficulty(level);
 }
 
 
