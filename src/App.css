@@ -102,3 +102,9 @@ gap: 0.5rem;
   color: var(--blue-600);
   border: 2px solid var(--blue-600);  
 }
+
+.header h3 {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--neutral-400);
+}
