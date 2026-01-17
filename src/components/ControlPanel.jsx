@@ -1,4 +1,4 @@
-function ControlPanel({ difficulty, onDifficultyChange }) {
+function ControlPanel({ difficulty, onDifficultyChange, mode, onModeChange }) {
   return (
     <div className="control-panel">
       {/* Difficulty selector */}
@@ -15,8 +15,8 @@ function ControlPanel({ difficulty, onDifficultyChange }) {
       <div className="control-group">
         <label>Mode:</label>
         <div className="button-group">
-          <button className="btn active">Timed (60s)</button>
-          <button className="btn">Passage</button>
+          <button className={mode === "timed" ? "btn active" : "btn"} onClick={() => onModeChange("timed")}>Timed (60s)</button>
+          <button className={mode === "passage" ? "btn active" : "btn"} onClick={() => onModeChange("passage")}>Passage</button>
         </div>
       </div>
 
