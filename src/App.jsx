@@ -18,13 +18,18 @@ function handleDifficultyChange(level) {
   setDifficulty(level);
 }
 
+function handleModeChange(mode) {
+  console.log("Mode Button clicked", mode);
+  setMode(mode);
+}
 
   return (
     <div className="app">
       <Header />
       <div className="controls-container">
              <Stats />
-      <ControlPanel difficulty={difficulty} onDifficultyChange={handleDifficultyChange}/> 
+      <ControlPanel difficulty={difficulty} onDifficultyChange={handleDifficultyChange}
+      mode={mode} onModeChange={handleModeChange}/> 
       </div>
       {!showResults && <TypingArea />}
       {showResults && <Results />}
