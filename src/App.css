@@ -43,10 +43,6 @@ body {
   min-height: 100vh;
 }
 
-.header h1 {
-color: var(--neutral-0);
-}
-
 button {
   font-family: var(--font-family);
   cursor: pointer;
@@ -103,8 +99,3 @@ gap: 0.5rem;
   border: 2px solid var(--blue-600);  
 }
 
-.header h3 {
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--neutral-400);
-}
