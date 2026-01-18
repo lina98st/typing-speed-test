@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Stats from './components/Stats'
 import ControlPanel from './components/ControlPanel'
@@ -22,6 +22,35 @@ function handleModeChange(mode) {
   console.log("Mode Button clicked", mode);
   setMode(mode);
 }
+
+//fetch api for json text
+async function loadPassages() {
+  const url = "/data.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+    return result;  
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+//load json data with useEffect
+useEffect(() => {
+  const fetchData = async () => {
+    const data = await loadPassages();
+    if (data) {
+      console.log(data);
+    }
+  };
+  
+  fetchData();
+}, []);
 
   return (
     <div className="app">
