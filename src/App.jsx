@@ -52,6 +52,13 @@ useEffect(() => {
   fetchData();
 }, []);
 
+//load right difficulty list 
+  function selectRandomPassage(allData, difficultyLevel) {
+const array = allData[difficultyLevel]
+  const index = Math.floor(Math.random() * array.length)
+return array[index].text  
+  }
+
   return (
     <div className="app">
       <Header />
