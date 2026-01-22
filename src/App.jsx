@@ -46,6 +46,8 @@ useEffect(() => {
     const data = await loadPassages();
     if (data) {
       console.log(data);
+      const passage = selectRandomPassage(data, difficulty);
+      setCurrentPassage(passage);
     }
   };
   
@@ -67,7 +69,7 @@ return array[index].text
       <ControlPanel difficulty={difficulty} onDifficultyChange={handleDifficultyChange}
       mode={mode} onModeChange={handleModeChange}/> 
       </div>
-      {!showResults && <TypingArea />}
+ {!showResults && <TypingArea passage={currentPassage} />}
       {showResults && <Results />}
     </div>
   )
